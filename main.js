@@ -6,13 +6,13 @@ const secretKey = 'NSEFPFYSQEJA9GARTKQ68BODIY4HRD9B9TWOXBACRJUHIIBZIZ'
 const titleId = 'DA7D0'
 
 const app = express();
-const port = 8080;
+const port = 5000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.listen(port, () => console.log(`listening on http://localhost:${port}`));
+app.listen(process.env.PORT || port, () => console.log("playfab-api-endpoint listening"));
 
 // GetMatchResult ==================================================
 // Invoked by Player -> Passes SessionTicket as X-Authorization
