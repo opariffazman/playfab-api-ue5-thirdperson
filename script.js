@@ -86,3 +86,24 @@ const RecordMatchResult = () => {
     .then(result => alert({ message: 'match recorded'}))
     .catch(error => console.log('error', error));
 }
+
+const GetPlayerStatistics = () => {
+  let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  let raw = JSON.stringify({
+    "PlayFabId": document.getElementById("playFabId").value
+   });
+
+  let requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+
+  fetch("https://blooming-plains-80499.herokuapp.com/v1/api/player/byId", requestOptions)
+    .then(response => response.text())
+    .then(result => document.getElementById("playerStatistics").innerHTML = result)
+    .catch(error => console.log('error', error));
+}

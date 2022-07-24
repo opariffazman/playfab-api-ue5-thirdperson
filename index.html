@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h>PlayFab Web API - Player</h>
+    <h2>PlayFab Web API - Player</h2>
 
     <div>
         <div class="input-container" hidden>
@@ -37,7 +37,7 @@
         </div>
     </div>
     <br />
-    <h>PlayFab Web API - Game Client</h>
+    <h2>PlayFab Web API - Game Client</h2>
     <div>
         <div class="input-container">
             <input class="input-field" type="text" id="playFabId" placeholder="PlayFab Id">
@@ -52,6 +52,14 @@
             <input class="input-field" type="text" id="end" placeholder="End">
         </div>
         <button type="submit" class="btn" onclick="RecordMatchResult()">Record Match Result</button>
+
+        <h2>Player Statistics</h2>
+
+        <button type="submit" class="btn" onclick="GetPlayerStatistics()">Get Player Statistics</button>
+
+        <div class="input-container">
+            <textarea id="playerStatistics" cols="100" rows="5" readonly></textarea>
+        </div>
     </div>
 
 </body>
