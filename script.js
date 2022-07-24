@@ -57,7 +57,7 @@ const GetMatchResult = () => {
     redirect: 'follow'
   };
 
-  fetch("http://localhost:8080/v1/api/match/byId", requestOptions)
+  fetch("https://blooming-plains-80499.herokuapp.com/v1/api/match/byId", requestOptions)
     .then(response => response.text())
     .then(result => document.getElementById("matchData").innerHTML = result)
     .catch(error => console.log('error', error));
@@ -81,7 +81,7 @@ const RecordMatchResult = () => {
     redirect: 'follow'
   };
 
-  fetch("http://localhost:8080/v1/api/match/", requestOptions)
+  fetch("https://blooming-plains-80499.herokuapp.com/v1/api/match/", requestOptions)
     .then(response => response.text())
     .then(result => alert({ message: 'match recorded'}))
     .catch(error => console.log('error', error));
