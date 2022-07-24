@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PlayFab Web API</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h>PlayFab Web API - Player</h>
+
+    <div>
+        <div class="input-container" hidden>
+            <input class="input-field" type="text" id="titleId" value="DA7D0" hidden>
+        </div>
+        <div class="input-container">
+            <input class="input-field" type="text" id="email" value="opsedar95@gmail.com" placeholder="Enter Email">
+        </div>
+        <div class="input-container">
+            <input class="input-field" type="password" id="password" placeholder="Enter Password">
+        </div>
+
+        <textarea id="loginData" cols="100" rows="5" hidden></textarea>
+
+        <div class="input-container">
+            <input input class="input-field" type="text" id="matchId" placeholder="Match Id"
+                onfocus="LoginWithEmailAddress()">
+        </div>
+
+        <button type="submit" class="btn" onclick="GetMatchResult()">Get Match Result</button>
+
+        <div class="input-container">
+            <textarea id="matchData" cols="100" rows="5" readonly></textarea>
+        </div>
+    </div>
+    <br />
+    <h>PlayFab Web API - Game Client</h>
+    <div>
+        <div class="input-container">
+            <input class="input-field" type="text" id="playFabId" placeholder="PlayFab Id">
+        </div>
+        <div class="input-container">
+            <input class="input-field" type="text" id="matchId" placeholder="Match Id">
+        </div>
+        <div class="input-container">
+            <input class="input-field" type="text" id="score" placeholder="Score">
+        </div>
+        <div class="input-container">
+            <input class="input-field" type="text" id="end" placeholder="End">
+        </div>
+        <button type="submit" class="btn" onclick="RecordMatchResult()">Record Match Result</button>
+    </div>
+
+</body>
+
+</html>

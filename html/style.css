@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --background-color: #212a2e;
+  --text-color: #F7F8F8;
+  --highlight-color: lightseagreen;
+  --color-scheme: light;
+}
+
+html[data-theme='light'] {
+  --background-color: #F7F8F8;
+  --text-color: #121416d8;
+  --color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  --background-color: #212a2e;
+  --text-color: #F7F8F8;
+  --color-scheme: dark;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+input {
+  color-scheme: var(--color-scheme);
+}
+
+.input-container {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.input-field {
+  border-width: 1px;
+}
+
+.input-field:focus {
+  border: 1px solid lightseagreen;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: lightseagreen;
+  color: var(--text-color);
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+@media (pointer: coarse),
+(hover: none) {
+  [title] {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  [title]:focus::after {
+    content: attr(title);
+    position: absolute;
+    top: 90%;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: 1px solid;
+    width: fit-content;
+    padding: 3px;
+  }
+}
