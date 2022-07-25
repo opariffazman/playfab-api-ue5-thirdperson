@@ -57,6 +57,8 @@ const GetMatchResult = () => {
     redirect: 'follow'
   };
 
+  document.getElementById("playFabId").setAttribute('value', GetPlayFabId());
+
   fetch("https://blooming-plains-80499.herokuapp.com/v1/api/match/byId", requestOptions)
     .then(response => response.text())
     .then(result => document.getElementById("matchData").innerHTML = result)
