@@ -46,7 +46,7 @@ const GetMatchResult = () => {
   myHeaders.append("Content-Type", "application/json");
 
   let raw = JSON.stringify({
-    "MatchId": document.getElementById("matchId").value,
+    "MatchId": document.getElementById("matchIdToGet").value,
     "PlayFabId": GetPlayFabId(),
     "SessionTicket": GetSessionTicket()
   });
@@ -71,7 +71,7 @@ const RecordMatchResult = () => {
   myHeaders.append("Content-Type", "application/json");
 
   let raw = JSON.stringify({
-    "MatchId": document.getElementById("matchId").value,
+    "MatchId": document.getElementById("matchIdToAdd").value,
     "PlayFabId": document.getElementById("playFabId").value,
     "Score": document.getElementById("score").value,
     "End": document.getElementById("end").value
