@@ -86,7 +86,7 @@ const RecordMatchResult = () => {
 
   fetch("https://blooming-plains-80499.herokuapp.com/v1/api/match/", requestOptions)
     .then(response => response.text())
-    .then(result => alert({ message: 'match recorded'}))
+    .then(result => alert(result))
     .catch(error => console.log('error', error));
 }
 
