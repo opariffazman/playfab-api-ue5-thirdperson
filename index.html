@@ -25,9 +25,12 @@
 
         <textarea id="loginData" cols="100" rows="5" hidden></textarea>
 
+        <button type="submit" class="btn" onclick="LoginWithEmailAddress()">Login</button>
+
+        <h3>Match Information</h3>
+
         <div class="input-container">
-            <input input class="input-field" type="text" id="matchId" placeholder="Match Id"
-                onfocus="LoginWithEmailAddress()">
+            <input input class="input-field" type="text" id="matchId" placeholder="Match Id">
         </div>
 
         <button type="submit" class="btn" onclick="GetMatchResult()">Get Match Result</button>

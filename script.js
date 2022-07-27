@@ -24,6 +24,7 @@ const LoginWithEmailAddress = () => {
   fetch(url, requestOptions)
     .then(response => response.text())
     .then(result => document.getElementById("loginData").innerHTML = result)
+    .then(alert("Logged in successful!"))
     .catch(error => console.log('error', error));
 
 }
